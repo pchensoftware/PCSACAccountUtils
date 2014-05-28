@@ -16,6 +16,10 @@
 		8136D71C193643AF0055B845 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8136D71B193643AF0055B845 /* Images.xcassets */; };
 		8136D73B193643E90055B845 /* ACAccountStore+PCSUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 8136D73A193643E90055B845 /* ACAccountStore+PCSUtils.m */; };
 		8136D73D193644000055B845 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8136D73C193644000055B845 /* Accounts.framework */; };
+		8136D746193645B80055B845 /* DTActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 8136D741193645B80055B845 /* DTActionSheet.m */; };
+		8136D747193645B80055B845 /* DTAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8136D743193645B80055B845 /* DTAlertView.m */; };
+		8136D748193645B80055B845 /* UIView+DTActionHandlers.m in Sources */ = {isa = PBXBuildFile; fileRef = 8136D745193645B80055B845 /* UIView+DTActionHandlers.m */; };
+		8136D74E193646780055B845 /* MyController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8136D74D193646780055B845 /* MyController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +38,15 @@
 		8136D739193643E90055B845 /* ACAccountStore+PCSUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ACAccountStore+PCSUtils.h"; sourceTree = "<group>"; };
 		8136D73A193643E90055B845 /* ACAccountStore+PCSUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ACAccountStore+PCSUtils.m"; sourceTree = "<group>"; };
 		8136D73C193644000055B845 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		8136D740193645B80055B845 /* DTActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTActionSheet.h; sourceTree = "<group>"; };
+		8136D741193645B80055B845 /* DTActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTActionSheet.m; sourceTree = "<group>"; };
+		8136D742193645B80055B845 /* DTAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTAlertView.h; sourceTree = "<group>"; };
+		8136D743193645B80055B845 /* DTAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTAlertView.m; sourceTree = "<group>"; };
+		8136D744193645B80055B845 /* UIView+DTActionHandlers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+DTActionHandlers.h"; sourceTree = "<group>"; };
+		8136D745193645B80055B845 /* UIView+DTActionHandlers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+DTActionHandlers.m"; sourceTree = "<group>"; };
+		8136D74B1936462B0055B845 /* DTWeakSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTWeakSupport.h; sourceTree = "<group>"; };
+		8136D74C193646780055B845 /* MyController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyController.h; sourceTree = "<group>"; };
+		8136D74D193646780055B845 /* MyController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +68,7 @@
 			isa = PBXGroup;
 			children = (
 				8136D738193643D70055B845 /* PCSACAccountUtils */,
+				8136D73E193645930055B845 /* Libraries */,
 				8136D70F193643AF0055B845 /* PCSACAccountUtilsExample */,
 				8136D708193643AF0055B845 /* Frameworks */,
 				8136D707193643AF0055B845 /* Products */,
@@ -84,6 +98,8 @@
 		8136D70F193643AF0055B845 /* PCSACAccountUtilsExample */ = {
 			isa = PBXGroup;
 			children = (
+				8136D74C193646780055B845 /* MyController.h */,
+				8136D74D193646780055B845 /* MyController.m */,
 				8136D718193643AF0055B845 /* PCSAppDelegate.h */,
 				8136D719193643AF0055B845 /* PCSAppDelegate.m */,
 				8136D71B193643AF0055B845 /* Images.xcassets */,
@@ -111,6 +127,46 @@
 			);
 			name = PCSACAccountUtils;
 			path = ../PCSACAccountUtils;
+			sourceTree = "<group>";
+		};
+		8136D73E193645930055B845 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				8136D749193645BC0055B845 /* DTFoundation */,
+			);
+			name = Libraries;
+			path = ../Libraries;
+			sourceTree = "<group>";
+		};
+		8136D73F193645B80055B845 /* BlocksAdditions */ = {
+			isa = PBXGroup;
+			children = (
+				8136D740193645B80055B845 /* DTActionSheet.h */,
+				8136D741193645B80055B845 /* DTActionSheet.m */,
+				8136D742193645B80055B845 /* DTAlertView.h */,
+				8136D743193645B80055B845 /* DTAlertView.m */,
+				8136D744193645B80055B845 /* UIView+DTActionHandlers.h */,
+				8136D745193645B80055B845 /* UIView+DTActionHandlers.m */,
+			);
+			path = BlocksAdditions;
+			sourceTree = "<group>";
+		};
+		8136D749193645BC0055B845 /* DTFoundation */ = {
+			isa = PBXGroup;
+			children = (
+				8136D74B1936462B0055B845 /* DTWeakSupport.h */,
+				8136D74A193646080055B845 /* iOS */,
+			);
+			name = DTFoundation;
+			path = DTFoundation/Core/Source;
+			sourceTree = "<group>";
+		};
+		8136D74A193646080055B845 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				8136D73F193645B80055B845 /* BlocksAdditions */,
+			);
+			path = iOS;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -178,8 +234,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				8136D716193643AF0055B845 /* main.m in Sources */,
+				8136D746193645B80055B845 /* DTActionSheet.m in Sources */,
+				8136D747193645B80055B845 /* DTAlertView.m in Sources */,
 				8136D71A193643AF0055B845 /* PCSAppDelegate.m in Sources */,
+				8136D74E193646780055B845 /* MyController.m in Sources */,
 				8136D73B193643E90055B845 /* ACAccountStore+PCSUtils.m in Sources */,
+				8136D748193645B80055B845 /* UIView+DTActionHandlers.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

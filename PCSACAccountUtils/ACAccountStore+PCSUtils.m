@@ -5,12 +5,13 @@
 //====================================================================================================
 
 #import "ACAccountStore+PCSUtils.h"
+#import "DTActionSheet.h"
 
 static ACAccount *_acAccountStore_PCSUtils_TwitterAccount = nil;
 
 @implementation ACAccountStore (PCSUtils)
 
-+ (void)getTwitterAccount:(void(^)(ACAccount *account))completion {
++ (void)getTwitterAccountFromController:(UIViewController *)controller completion:(void(^)(ACAccount *account))completion {
    if (_acAccountStore_PCSUtils_TwitterAccount) {
       if (completion)
          completion(_acAccountStore_PCSUtils_TwitterAccount);
@@ -44,16 +45,17 @@ static ACAccount *_acAccountStore_PCSUtils_TwitterAccount = nil;
                completion(_acAccountStore_PCSUtils_TwitterAccount);
          }
          else {
-            /*
             DTActionSheet *actions = [[DTActionSheet alloc] initWithTitle:@"Select Twitter account"];
             for (ACAccount *account in accounts) {
                [actions addButtonWithTitle:account.username block:^{
-                  [self _favoriteTweet:tweet withAccount:account];
+                  _acAccountStore_PCSUtils_TwitterAccount = account;
+                  
+                  if (completion)
+                     completion(_acAccountStore_PCSUtils_TwitterAccount);
                }];
             }
             [actions addCancelButtonWithTitle:@"Cancel"];
-            [actions showInView:self.view];
-             */
+            [actions showInView:controller.view];
          }
       });
    }];

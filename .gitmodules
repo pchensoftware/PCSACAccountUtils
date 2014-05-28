@@ -1,0 +1,3 @@
+[submodule "Libraries/DTFoundation"]
+	path = Libraries/DTFoundation
+	url = https://github.com/Cocoanetics/DTFoundation.git

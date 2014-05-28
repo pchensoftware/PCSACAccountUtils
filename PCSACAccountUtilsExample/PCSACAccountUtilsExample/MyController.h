@@ -4,11 +4,10 @@
 // Copyright 2014 Peter Chen
 //====================================================================================================
 
-#import <Foundation/Foundation.h>
-#import <Accounts/Accounts.h>
+#import <UIKit/UIKit.h>
 
-@interface ACAccountStore (PCSUtils)
+@interface MyController : UIViewController
 
-+ (void)getTwitterAccountFromController:(UIViewController *)controller completion:(void(^)(ACAccount *account))completion;
+
 
 @end
