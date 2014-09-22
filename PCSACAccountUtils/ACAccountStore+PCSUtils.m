@@ -5,7 +5,6 @@
 //====================================================================================================
 
 #import "ACAccountStore+PCSUtils.h"
-#import "DTActionSheet.h"
 
 static ACAccount *_acAccountStore_PCSUtils_TwitterAccount = nil;
 
@@ -45,7 +44,7 @@ static ACAccount *_acAccountStore_PCSUtils_TwitterAccount = nil;
                completion(_acAccountStore_PCSUtils_TwitterAccount);
          }
          else {
-            DTActionSheet *actions = [[DTActionSheet alloc] initWithTitle:@"Select Twitter account"];
+            HIDActionSheet *actions = [[HIDActionSheet alloc] initWithTitle:@"Select Twitter account"];
             for (ACAccount *account in accounts) {
                [actions addButtonWithTitle:account.username block:^{
                   _acAccountStore_PCSUtils_TwitterAccount = account;
@@ -54,7 +53,7 @@ static ACAccount *_acAccountStore_PCSUtils_TwitterAccount = nil;
                      completion(_acAccountStore_PCSUtils_TwitterAccount);
                }];
             }
-            [actions addCancelButtonWithTitle:@"Cancel"];
+            [actions addCancelButtonWithTitle:@"Cancel" block:nil];
             [actions showInView:controller.view];
          }
       });
